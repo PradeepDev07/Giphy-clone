@@ -4,7 +4,7 @@ const Gif = ({gif,hover=true}) => {
     console.log(gif);
   return (
    <Link to={`/${gif.type}/${gif.slug}`}>
-    <div className='border-1 border-gray-700 cursor-pointer w-full mb-2 relative group aspect-video'>
+    <div className='border border-gray-700 cursor-pointer w-full mb-2 relative group aspect-video'>
         <img 
         src={gif.images.fixed_width_downsampled.url} 
         alt={gif.title} 
