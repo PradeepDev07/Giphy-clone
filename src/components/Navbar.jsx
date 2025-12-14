@@ -1,5 +1,5 @@
 import React, {useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { HiEllipsisVertical,HiMiniBars3 } from "react-icons/hi2";
 import { GifState } from '../context/GifContext';
 
@@ -7,6 +7,8 @@ const Navbar = () => {
    const {gf,favorites} = GifState();
    const [category,setCategory] = useState([])
    const [showCategory,setShowCategory] = useState(false)
+
+   const navigate = useNavigate()
     
    const fetchApiCategories = async()=>{
     const res = await gf.categories()
@@ -20,7 +22,7 @@ const Navbar = () => {
   return (
     <header className='py-2'>
         <nav className='relative flex justify-between items-center  py-2'>
-            <Link href="/">
+            <Link to="/" className='text-white flex items-center gap-2'>
             <div className='flex items-center gap-2 text-white'>
                 <img src="/logo.svg" alt="Logo"  className='w-10 sm:w-16 '/>
                 <h1 className='text-2xl tracking-tight font-bold cursor-pointer sm:text-4xl md:text-5xl '>GIFER</h1>
@@ -42,9 +44,9 @@ const Navbar = () => {
             </button>
             {
                 favorites.length > 0 && (
-                    <Link to="/favorites" className='text-white mx-2 border-b-4 p-1 hover:gradient-custom '>
-                Favorites ({favorites.length})
-                </Link>
+
+                 <button className='bg-gray-700 px-3 py-1 rounded' onClick={()=>navigate("/favorites")}>Favorites ({favorites.length})</button>
+
                 )
 
             }
