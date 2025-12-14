@@ -16,7 +16,7 @@ const App = () => {
       <Route path="/search/:query" element={<SearchResults />} />
       <Route path="/:type/:slug" element={<GifDetail />} />
       <Route path="/favorites" element={<Favorites />} />
-      <Route path="*" element={<NotFound />} />
+
     </Routes>
     </BrowserRouter>
 

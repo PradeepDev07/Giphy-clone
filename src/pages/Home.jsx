@@ -11,7 +11,7 @@ const Home = () => {
   const gifsTrending= async ()=>{
     const {data} = await gf.trending(
       {
-        limit:8,
+        limit:100,
         type:filter,
         rating:"g"
       }

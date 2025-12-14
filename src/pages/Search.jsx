@@ -17,7 +17,7 @@ const Search = () => {
       {
         sort: "relevant",
         lang: "en",
-        limit: 20,
+        limit: 100,
         type: filter,
 
       }

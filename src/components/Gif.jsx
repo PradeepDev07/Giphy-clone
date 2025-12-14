@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 const Gif = ({gif,hover=true}) => {
     console.log(gif);
   return (
-   <Link to={`/${gif.type}/${gif.slug}`}>
+   <Link to={`/${gif.type}s/${gif.slug}`}>
     <div className='border border-gray-700 cursor-pointer w-full mb-2 relative group aspect-video'>
         <img 
-        src={gif.images.fixed_width_downsampled.url} 
-        alt={gif.title} 
+        src={gif?.images?.fixed_width_downsampled?.url} 
+        alt={gif?.title} 
         className={`w-full h-auto rounded`}
         />
         {

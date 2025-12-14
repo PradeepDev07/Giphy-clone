@@ -4,7 +4,7 @@ import { HiEllipsisVertical,HiMiniBars3 } from "react-icons/hi2";
 import { GifState } from '../context/GifContext';
 
 const Navbar = () => {
-   const {gf, filter,setFilter,favorites} = GifState();
+   const {gf,favorites} = GifState();
    const [category,setCategory] = useState([])
    const [showCategory,setShowCategory] = useState(false)
     
