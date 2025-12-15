@@ -63,9 +63,10 @@ const GifPage = () => {
 
   return (
      <section className='flex flex-col w-full min-h-screen bg-gray-950 text-white'>
-        <Navbar />
+       
         
         <div className='w-full px-4 lg:max-w-7xl mx-auto mt-5 pb-10'>
+           <Navbar />
            <SearchGifs />
            
            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mt-8'>
