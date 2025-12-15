@@ -26,11 +26,13 @@ const FilterGifs = ({hidetrend=false, showFilter=true}) => {
             <HiArrowTrendingUp size={24} className="inline-block mr-2 text-teal-400" />
             <span>Trending</span>
         </div>}
-        <div className="bg-gray-800 flex rounded-full justify-around">
+                <div className="bg-gray-800 flex rounded-full justify-around transition-all duration-300">
             {filterConst.map((fil)=>(
+                
                 <button 
                 key={fil.value }
-                className={`w-full py-2  px-3 mr-2 rounded-full text-white font-semibold ${ fil.value === filter ? fil.background : ""}`}
+                
+                className={`w-full py-2  px-3 mr-2 rounded-full text-white font-semibold  ${ fil.value === filter ? fil.background : ""}`}
                 onClick={()=>setFilter(fil.value)}
                 >
                     {fil.title}
